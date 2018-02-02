@@ -1,8 +1,9 @@
 {
     "name": "osflab/test",
+    "description": "OSF simple unit test component",
     "type": "library",
     "homepage": "https://github.com/osflab/test",
-    "licence": "AGPL-3.0-or-later",
+    "license": "AGPL-3.0-or-later",
     "authors": [
         {
             "name": "Guillaume Ponçon",
@@ -14,8 +15,10 @@
         "source": "https://github.com/osflab/test"
     },
     "require": {
-        "php": "^7.1.0"
+        "php": "^7.1.0",
+        "osflab/console": "~3.0.0"
     },
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "Osf\\Test\\": ""

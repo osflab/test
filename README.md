@@ -1,3 +1,3 @@
-A very simple test component
+# A very simple test component
 
 Under development for the moment.
