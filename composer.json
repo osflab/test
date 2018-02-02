@@ -1,0 +1,29 @@
+{
+    "name": "osflab/test",
+    "type": "library",
+    "homepage": "https://github.com/osflab/test",
+    "licence": "AGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Guillaume Ponçon",
+            "email": "guillaume.poncon@openstates.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/osflab/test/issues",
+        "source": "https://github.com/osflab/test"
+    },
+    "require": {
+        "php": "^7.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Osf\\Test\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.0.x-dev"
+        }
+    }
+}
