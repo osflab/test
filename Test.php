@@ -25,9 +25,13 @@ class Test extends OsfTest
     public static function run()
     {
         self::reset();
-        
-        self::assert(self::getResult() === true, 'Result must be true if no assertion');
-        self::assertEqual(0, 0, 'Theses values must be equals');
+        try {
+            self::assert(self::getResult() === true, 'Result must be true if no assertion');
+            self::assertEqual(0, 0, 'Theses values must be equals');
+        }
+        catch (\Exception $e) {
+            self::assertFalseException($e);
+        }
         
         return self::getResult();
     }

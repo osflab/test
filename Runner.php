@@ -96,8 +96,8 @@ class Runner
         self::$count = 0;
         self::$result = false;
         
-        if (class_exists('\Osf\Container')) {
-            \Osf\Container::setMockNamespace('MOCK-' . self::$totalCountFiles);
+        if (class_exists('\Osf\Container\OsfContainer')) {
+            \Osf\Container\OsfContainer::setMockNamespace('MOCK-' . self::$totalCountFiles);
         }
     }
 
