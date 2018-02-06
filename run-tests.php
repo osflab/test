@@ -1,5 +1,5 @@
 #!/usr/bin/env php
-<?php 
+<?php
 
 // Environment init
 defined('APPLICATION_ENV') || define('APPLICATION_ENV', 'development');
@@ -8,6 +8,8 @@ set_include_path(realpath(__DIR__ . '/../..') . PATH_SEPARATOR . get_include_pat
 // Autoloader
 if (file_exists(__DIR__ . '/vendor/autoload.php')) {
     require_once __DIR__ . '/vendor/autoload.php';
+} else if (file_exists(__DIR__ . '/../../autoload.php')) {
+    require_once __DIR__ . '/../../autoload.php';
 } else if (file_exists(__DIR__ . '/../Loader/autoload.php')) {
     require_once __DIR__ . '/../Loader/autoload.php';
 }
