@@ -16,7 +16,8 @@
     },
     "require": {
         "php": "^7.1.0",
-        "osflab/console": "~3.0.0"
+        "osflab/console": "~3.0.0",
+        "osflab/exception": "~3.0.0"
     },
     "minimum-stability": "dev",
     "autoload": {
