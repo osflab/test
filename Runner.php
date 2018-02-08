@@ -143,13 +143,15 @@ class Runner
     public static function runDirectory(
             string $path, 
             string $testSuffix = '/Test', 
-            ?string $filter = null): bool
+            ?string $filter = null,
+            ?string $exclude = '/vendor/'): bool
     {
         foreach (new \RecursiveIteratorIterator(
         new \RecursiveDirectoryIterator($path,
         \RecursiveDirectoryIterator::KEY_AS_PATHNAME),
         \RecursiveIteratorIterator::CHILD_FIRST) as $file => $info) {
-            if (!preg_match('#^' . $path . '.*' . $testSuffix . '\.php$#', $file)) {
+            if (!preg_match('#^' . $path . '.*' . $testSuffix . '\.php$#', $file) ||
+                ($exclude !== null && strpos($file, $exclude) !== false)) {
                 continue;
             }
             $matches = [];
