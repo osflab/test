@@ -8,7 +8,7 @@
 
 namespace Osf\Test;
 
-use Osf\Console\Base as Console;
+use Osf\Console\ConsoleHelper as Console;
 use Exception;
 
 /**
