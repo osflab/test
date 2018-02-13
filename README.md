@@ -1,11 +1,11 @@
-# A very simple test component
+# A very simple unit-test component
 
 A very quick learning time unit test component, that uses the command line to
 run the tests. Although it is under development, this component works.
 
 ## Installation
 
-You need `composer` to use this component:
+You need at least php 7.1 and `composer` to use this component:
 
 ```bash
 sudo apt install composer
@@ -17,8 +17,7 @@ Installation:
 
 ```bash
 git clone git@github.com:osflab/test.git
-cd test
-composer update
+cd test && composer update
 ```
 
 Test:
