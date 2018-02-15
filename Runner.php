@@ -71,9 +71,14 @@ class Runner
         $msg = '';
         if (!$result) {
             $value = preg_replace('/  +/', ' ', str_replace("\n", '', print_r($calculatedValue, true)));
-            $msg = 'Found ' . $value . ', Expected ' . $expectedValue;
+            $msg = '     Found: ' . self::varExport($calculatedValue) . ",\n      Expected: " . self::varExport($expectedValue);
         }
         return self::assert($result, $msg, $exitOnError);
+    }
+    
+    private static function varExport($var): string
+    {
+        return preg_replace('/  +/', ' ', str_replace("\n", '', print_r($var, true)));
     }
     
     /**
@@ -193,7 +198,7 @@ class Runner
         } catch (\Exception $e) {
             $result = array($e->getMessage(), 'Exception catched in the test library :', 
             $e->getFile() . '(' . $e->getLine() . ')');
-            if (APPLICATION_ENV == 'development') {
+            if (defined('APPLICATION_ENV') && APPLICATION_ENV == 'development') {
                 echo Console::endActionFail();
                 echo self::exceptionToStr($e);
                 exit;
