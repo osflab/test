@@ -171,9 +171,9 @@ class Runner
         if (self::$totalCountErrors > 0) {
             echo chr(033) . '[1;31m' . self::$totalCountErrors . ' failed' . chr(033) . '[0;0m';
         } else {
-            echo chr(033) . '[1;32m' . self::$totalCountErrors . ' failed' . chr(033) . '[0;0m';
+            echo chr(033) . '[1;32msuccess ^^' . chr(033) . '[0;0m';
         }
-        echo ".\n";
+        echo "\n";
         
         return !self::$totalCountErrors;
     }

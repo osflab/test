@@ -26,5 +26,16 @@
         "psr-4": {
             "Osf\\Test\\": ""
         }
+    },
+    "bin": [
+        "bin/runtests"
+    ],
+    "scripts": {
+        "post-install-cmd": [
+            "php bin/runtests"
+        ],
+        "post-update-cmd": [
+            "php bin/runtests"
+        ]
     }
 }
