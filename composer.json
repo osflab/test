@@ -1,7 +1,7 @@
 {
     "name": "osflab/test",
     "description": "OSF simple unit test component",
-    "version": "3.0.0",
+    "version": "3.0.1-dev",
     "type": "library",
     "homepage": "https://github.com/osflab/test",
     "license": "AGPL-3.0-or-later",
@@ -17,10 +17,10 @@
     },
     "require": {
         "php": "^7.1.0",
-        "osflab/console": "~3.0.0"
+        "osflab/console": "~3.0.1"
     },
     "suggest": {
-        "osflab/container": "~3.0.0"
+        "osflab/container": "~3.0.1"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
